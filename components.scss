@@ -1,0 +1,21 @@
+mark {
+    display: $mark-display;
+    @include background-shorthand((
+        image: $mark-background-image,
+        position: $mark-background-position,
+        repeat: $mark-background-repeat,
+        color: $mark-background-color,
+        attachment: $mark-background-attachment,
+        make-shorthand: true
+    ));
+    @include padding-shorthand((
+        top: $mark-padding-top, 
+        bottom: $mark-padding-bottom, 
+        left: $mark-padding-left, 
+        right: $mark-padding-right
+    ));
+    color: $mark-color;
+    @if mixin-exists(mark-extra-style) {
+        @include mark-extra-style();
+    }
+}

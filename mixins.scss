@@ -1,0 +1,21 @@
+//@mixin mark-extra-colors-propertys() {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin mark-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, background-color);
+    @include property-from-map($colors-map, color);
+    @if mixin-exists(mark-extra-colors-propertys) {
+        @include mark-extra-colors-propertys($colors-map);
+    }
+}
+
+@mixin mark-colors($colors-map) {
+    mark {
+        @include mark-colors-propertys($colors-map);
+    }
+}
+
+@mixin class-mark-colors($class, $colors-map) {
+    mark.#{$class} {
+        @include mark-colors-propertys($colors-map);
+    }
+}

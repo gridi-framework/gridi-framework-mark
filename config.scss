@@ -1,0 +1,12 @@
+$mark-display: inline-block;
+$mark-background-image: null !default;
+$mark-background-position: null !default;
+$mark-background-repeat: null !default;
+$mark-background-color: $primary-color !default;
+$mark-background-attachment: null !default;
+$mark-padding-top: $inline-background-elements-padding-top !default;
+$mark-padding-bottom: $inline-background-elements-padding-bottom !default;
+$mark-padding-left: $inline-background-elements-padding-left !default;
+$mark-padding-right: $inline-background-elements-padding-right !default;
+$mark-color: $primary-color-background-inner-color !default;
+//@mixin mark-extra-style() {} //Create this mixin before import module when you want add some special style for element
